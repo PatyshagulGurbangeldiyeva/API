@@ -1,0 +1,307 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 2338000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "a JWT is generated",
+            "match": {
+              "location": "com.api.steps.TokenGenerationSteps.a_JWT_is_generated()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-07-30T04:28:41.045Z",
+        "line": 7,
+        "name": "Creating an employee",
+        "description": "",
+        "id": "syntax-hrms-api-end-to-end-workflow;creating-an-employee",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 8000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "a request is prepared to create an employee",
+            "match": {
+              "location": "com.api.steps.APIWorkFlowAllSteps.a_request_is_prepared_to_create_an_employee()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 174000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "a POST call is made to create an employee",
+            "match": {
+              "location": "com.api.steps.APIWorkFlowAllSteps.a_POST_call_is_made_to_create_an_employee()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the status code for creating employee is 201",
+            "match": {
+              "arguments": [
+                {
+                  "val": "201",
+                  "offset": 41
+                }
+              ],
+              "location": "com.api.steps.APIWorkFlowAllSteps.the_status_code_for_creating_employee_is(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 95000000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the employee is created and response contains key \"Message\" and value \"Entry Created\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Message\"",
+                  "offset": 50
+                },
+                {
+                  "val": "\"Entry Created\"",
+                  "offset": 70
+                }
+              ],
+              "location": "com.api.steps.APIWorkFlowAllSteps.the_employee_is_created_and_response_contains_key_and_value(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 107000000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the employee ID \"Employee[0].employee_id\" is stored as a global variable to be used for other calls",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Employee[0].employee_id\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.api.steps.APIWorkFlowAllSteps.the_employee_ID_is_stored_as_a_global_variable_to_be_used_for_other_calls(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@workflow"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 158000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "a JWT is generated",
+            "match": {
+              "location": "com.api.steps.TokenGenerationSteps.a_JWT_is_generated()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-07-30T04:28:43.870Z",
+        "line": 62,
+        "name": "Update created employee",
+        "description": "",
+        "id": "syntax-hrms-api-end-to-end-workflow;update-created-employee",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 10000000,
+              "status": "passed"
+            },
+            "line": 63,
+            "name": "a request is prepared to update the created employee",
+            "match": {
+              "location": "com.api.steps.APIUpdateCreatedEmployee.a_request_is_prepared_to_update_the_created_employee()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 234000000,
+              "status": "passed"
+            },
+            "line": 64,
+            "name": "a PUT call is made to update the created employee",
+            "match": {
+              "location": "com.api.steps.APIUpdateCreatedEmployee.a_PUT_call_is_made_to_update_the_created_employee()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 19000000,
+              "status": "passed"
+            },
+            "line": 65,
+            "name": "the status code for updateing the created employee is 201",
+            "match": {
+              "arguments": [
+                {
+                  "val": "201",
+                  "offset": 54
+                }
+              ],
+              "location": "com.api.steps.APIUpdateCreatedEmployee.the_status_code_for_updateing_the_created_employee_is(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 25000000,
+              "status": "passed"
+            },
+            "line": 66,
+            "name": "the employee is updated and response contains key \"Message\" and value \"Entry updated\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Message\"",
+                  "offset": 50
+                },
+                {
+                  "val": "\"Entry updated\"",
+                  "offset": 70
+                }
+              ],
+              "location": "com.api.steps.APIUpdateCreatedEmployee.the_employee_is_updated_and_response_contains_key_and_value(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.NullPointerException\n\tat com.api.steps.APIWorkFlowAllSteps.the_retrieved_employee_ID_at_matches_the_globally_stored_employee_ID(APIWorkFlowAllSteps.java:91)\n\tat ✽.the retrieved employee ID at \"employee[0].employee_id\" matches the globally stored employee ID(file:///Users/vepagurbangeldiyev/eclipse-workspace/API/src/test/resources/features/APIWorkFlow.feature:67)\n",
+              "duration": 3000000,
+              "status": "failed"
+            },
+            "line": 67,
+            "name": "the retrieved employee ID at \"employee[0].employee_id\" matches the globally stored employee ID",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"employee[0].employee_id\"",
+                  "offset": 29
+                }
+              ],
+              "location": "com.api.steps.APIWorkFlowAllSteps.the_retrieved_employee_ID_at_matches_the_globally_stored_employee_ID(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "skipped"
+            },
+            "line": 68,
+            "name": "the retrieved data at \"employee\" matches the data used to update created employee with employee ID \"employee[0].employee_id\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"employee\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"employee[0].employee_id\"",
+                  "offset": 99
+                }
+              ],
+              "location": "com.api.steps.APIUpdateCreatedEmployee.the_retrieved_data_at_matches_the_data_used_to_update_created_employee_with_employee_ID(java.lang.String,java.lang.String,io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "emp_firstname",
+                  "emp_lastname",
+                  "emp_middle_name",
+                  "emp_gender",
+                  "emp_birthday",
+                  "emp_status",
+                  "emp_job_title"
+                ]
+              },
+              {
+                "cells": [
+                  "Alexsandra",
+                  "White",
+                  "Alex",
+                  "F",
+                  "2001-07-03",
+                  "Super Contractor",
+                  "Cloud Architect"
+                ]
+              }
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@workflow"
+          }
+        ]
+      }
+    ],
+    "name": "Syntax Hrms Api End to End Workflow",
+    "description": "",
+    "id": "syntax-hrms-api-end-to-end-workflow",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/APIWorkFlow.feature",
+    "tags": [
+      {
+        "name": "@workflow",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
